@@ -1,6 +1,6 @@
 from monsters_class import *
 
-class Student_monsters():
+class Student_monsters(Monsters):
     def __init__(self, name, skills, uni_id, grade):
         super().__init__(name, skills)
         self.uni_id = uni_id
