@@ -22,21 +22,6 @@ class Spooky_workshops():
         self.students.append(student)
 
 
-
-
-    # def subjects(self, scary_subject):
-    #     return 'These are the workshops that we are currently offering:' + \
-    #            scary_subject
-    def adding_student(self, student):
-        workshop = self
-        workshop.list_student_monsters.append(student)
-
-    def all_students(self, list_student_monsters):
-        return list_student_monsters
-
-    def list_of_all_subjects(self, scary_subject):
-        return scary_subject
-
 # all_subjects = ['Scarin-o-metry', 'Science of Scring', 'Fighting', 'Gym']
 #
 # Jim = Spooky_workshops('name', 'skills', 'id', 'grade', 'staff', 'location', all_subjects)
