@@ -14,12 +14,8 @@ class Student_monsters(Monsters):
 
     def get_grade(self):
         return self.__grade
+
     def set_grade(self, grade):
         self.__grade = grade
 
-name = input('What is your name? ')
-example_monster = Student_monsters(name, 1, 7)
-example_monster.set_grade(7)
-print('Monster name: ' + (name.capitalize()))
-print(f'Uni_ID: {example_monster.get_uni_id()}')
-print(f'Grade: {example_monster.get_grade()}')
+
