@@ -11,8 +11,11 @@ class Spooky_workshops():
         self.students.append(student)
 
     def list_student_id(self):
+        stu_id = []
         for student in self.students:
-            print(student.get_uni_id())
+            stu_id.extend([student.get_uni_id()])
+        return stu_id
+
 
 
 #all_subjects = ['Scarin-o-metry', 'Science of Scaring', 'Fighting', 'Gym']

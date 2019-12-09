@@ -21,7 +21,7 @@ while True:
     print('4- See student grade')
     print('5- Print full information of student')
     print('6- Search for student by name')
-    user_input = input('Choose one of the above options: ')
+    user_input = input('Choose one of the above options or enter exit: ')
     if user_input == '1':
         print('You have chosen option 1 - Create Monster')
         name = input('What is the students name? ')
@@ -40,15 +40,15 @@ while True:
     elif user_input == '3':
         print('You have chosen option 3 - Add student to spooky workshop')
         workshop = input('Select a workshop to add the student to: ')
-        student = input('Please enter the ID of the student you wish to add to this workshop: ')
+        stu = input('Please enter the ID of the student you wish to add to this workshop: ')
         for student in students_list:
-            if student == student.get_uni_id():
+            if stu == student.get_uni_id():
                 student_chosen = student
                 for subject in running_workshop:
                     if workshop == subject.scary_subject:
                         workshop_chosen = subject
-                        subject.add_student([student_chosen])
-                        print('The following student with ID: ' + subject.list_student_id() + ', has been added.')
+                        subject.add_student(student_chosen)
+                        print(f'The following students with ID: {subject.list_student_id()}, has been added')
 
     elif user_input == '4':
         print('You have chosen option 4 - See student grade')
@@ -68,8 +68,15 @@ while True:
 
     elif user_input == '6':
         print('You have chosen option 6 - Search for student by name')
+        stu_name = input('What is the students name? ')
+        for student in students_list:
+            if stu_name == student.get_name():
+                print(f"Name: {student.get_name()}")
+                print(f"Uni ID: {student.get_uni_id()}")
+                print(f"Grade: {student.get_grade()}")
 
-
+    elif user_input == 'exit':
+        break
 
 
 # Ask for info
