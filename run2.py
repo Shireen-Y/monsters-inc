@@ -43,11 +43,11 @@ while True:
         stu = input('Please enter the ID of the student you wish to add to this workshop: ')
         for student in students_list:
             if stu == student.get_uni_id():
-                student_chosen = student
+                #student_chosen = student
                 for subject in running_workshop:
                     if workshop == subject.scary_subject:
-                        workshop_chosen = subject
-                        subject.add_student(student_chosen)
+                        #workshop_chosen = subject
+                        subject.add_student(student)
                         print(f'The following students with ID: {subject.list_student_id()}, has been added')
 
     elif user_input == '4':
@@ -55,7 +55,7 @@ while True:
         student_id = input('What is the student ID? ')
         for student in students_list:
             if student_id == student.get_uni_id():
-                print(student.get_grade())
+                print('Student grade: ' + student.get_grade())
 
     elif user_input == '5':
         print('You have chosen option 5 - Print full information of student')
